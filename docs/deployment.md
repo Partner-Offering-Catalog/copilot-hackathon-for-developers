@@ -8,5 +8,8 @@ deployment keys, or production URLs into this document.
 ## Publishing this knowledge base
 
 Use Hugo or the organization-approved static-site generator with its source in
-`docs/`. Configure GitHub Pages through a reviewed workflow, publish only
+`docs/`. This template publishes through the `Deploy documentation` GitHub
+Actions workflow rather than a branch. In repository **Settings > Pages**,
+select **GitHub Actions** as the build and deployment source. The workflow
+builds `docs/` with Hugo and deploys the generated artifact. Publish only
 non-sensitive documentation, and validate generated links before release.

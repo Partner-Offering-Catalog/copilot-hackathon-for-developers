@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Application Knowledge Base"
+
+[params]
+  description = "Setup, usage, operations, and handover guidance."
