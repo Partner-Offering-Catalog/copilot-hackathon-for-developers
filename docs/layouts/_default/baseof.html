@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ site.Language.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ site.Params.description }}">
+    <title>{{ if not .IsHome }}{{ .Title }} | {{ end }}{{ site.Title }}</title>
+    <style>
+      :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+      body { margin: 0 auto; max-width: 72ch; padding: 2rem 1rem; line-height: 1.5; }
+      a { color: #0969da; }
+      nav ul { display: flex; flex-wrap: wrap; gap: 1rem; list-style: none; padding: 0; }
+      code { padding: .1rem .3rem; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+      <nav aria-label="Primary">
+        <ul>
+          {{ range site.RegularPages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </nav>
+    </header>
+    <main>{{ block "main" . }}{{ end }}</main>
+  </body>
+</html>

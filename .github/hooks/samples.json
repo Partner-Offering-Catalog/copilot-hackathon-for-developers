@@ -1,0 +1,96 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Review AGENTS.md and repository guidance before starting.\""
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Confirm scope and keep secrets out of prompts.\""
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "edit|create",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Review the proposed file edit before it runs.\""
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "edit|create",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Run the smallest relevant validation after edits.\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Record current task scope and validation status.\""
+          }
+        ]
+      }
+    ],
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Give the subagent focused scope and repository rules.\""
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Review subagent results before using them.\""
+          }
+        ]
+      }
+    ],
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Review notification details before continuing.\""
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"Summarize changes, validation, and follow-up work.\""
+          }
+        ]
+      }
+    ]
+  }
+}

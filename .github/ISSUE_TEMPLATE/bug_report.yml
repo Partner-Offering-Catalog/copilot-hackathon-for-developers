@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a reproducible problem
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: Thank you for helping improve the application.
+  - type: textarea
+    id: description
+    attributes:
+      label: Problem
+      description: Describe what happened and the impact.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: App version, browser, operating system, and relevant configuration.
